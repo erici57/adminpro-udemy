@@ -7,28 +7,31 @@ import { AppRoutingModule } from './app-routing.module';
 // MODULOS
 import { PagesModule } from './pages/pages.module';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginModule } from './login/login.module';
+
 
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './login/register.component';
-
+import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
 // temporal
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent
+    NopagefoundComponent,
+    
 
   ],
   imports: [
     BrowserModule,
     PagesModule,
+    LoginModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
