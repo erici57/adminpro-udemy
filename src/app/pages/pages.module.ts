@@ -4,6 +4,7 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
+import { ModalUploadComponent } from '../component/modal-upload/modal-upload.component';
 
 // modulos
 import { SharedModule } from '../shared/shared.module';
@@ -27,6 +28,8 @@ import { ProfileComponent } from './profile/profile.component';
 
 // pipe module
 import { PipesModule } from '../pipes/pipes.module';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+
 
 
 
@@ -44,7 +47,9 @@ import { PipesModule } from '../pipes/pipes.module';
     AccountSettingsComponent,
     PromesasComponent,
     RxjsComponent,
-    ProfileComponent
+    ProfileComponent,
+    UsuariosComponent,
+    ModalUploadComponent,
   ],
   exports: [
     DashboardComponent,
