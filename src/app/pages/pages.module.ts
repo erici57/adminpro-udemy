@@ -29,6 +29,9 @@ import { ProfileComponent } from './profile/profile.component';
 // pipe module
 import { PipesModule } from '../pipes/pipes.module';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { MedicoComponent } from './medicos/medico.component';
 
 
 
@@ -50,6 +53,9 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
     ProfileComponent,
     UsuariosComponent,
     ModalUploadComponent,
+    HospitalesComponent,
+    MedicosComponent,
+    MedicoComponent,
   ],
   exports: [
     DashboardComponent,
