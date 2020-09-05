@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Usuario } from '../../models/usuario.model';
 import { HttpClient } from '@angular/common/http';
-import { URL_SERVICIOS } from '../../config/config';
+
 import { map, catchError } from 'rxjs/operators';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { SubirArchivoService } from '../subir-archivo/subir-archivo.service';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
+
+const URL_SERVICIOS = environment.URL_SERVICIOS;
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +29,32 @@ export class UsuarioService {
 
   }
 
+
+  renuevaToken() {
+    let url = URL_SERVICIOS + '/login/renuevatoken';
+    url += '?token=' + this.token;
+
+    return this.http.get(url).pipe(
+      map( (resp: any) => {
+
+        this.token = resp.token;
+        localStorage.setItem('token', this.token);
+        return true;
+      }),
+      catchError( err => {
+
+        this.router.navigate(['/login']);
+        Swal.fire({
+          title: 'Error',
+          text: 'No se pudo renovar token',
+          icon: 'error'
+        });
+
+        return new Observable<any>();
+      })
+
+    );
+  }
 
 
   estaLogueado() {

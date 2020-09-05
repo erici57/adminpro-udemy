@@ -37,9 +37,6 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
 
 
 
-
-
-
 @NgModule({
   declarations: [
     PagesComponent,

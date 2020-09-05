@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { URL_SERVICIOS } from 'src/app/config/config';
 
+import { environment } from 'src/environments/environment';
+
+const URL_SERVICIOS = environment.URL_SERVICIOS;
 
 @Injectable({
   providedIn: 'root'

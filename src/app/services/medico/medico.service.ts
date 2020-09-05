@@ -3,10 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { UsuarioService } from '../usuario/usuario.service';
 import { SubirArchivoService } from '../subir-archivo/subir-archivo.service';
-import { URL_SERVICIOS } from 'src/app/config/config';
+
 import { map } from 'rxjs/operators';
 import Swal from 'sweetalert2';
 import { Medico } from '../../models/medico.model';
+import { environment } from 'src/environments/environment';
+
+const URL_SERVICIOS = environment.URL_SERVICIOS;
 
 @Injectable({
   providedIn: 'root'
